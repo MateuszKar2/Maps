@@ -6,3 +6,4 @@ const company = new Company;
 
 console.log(user);
 console.log(company);
+
