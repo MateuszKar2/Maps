@@ -7,7 +7,7 @@ interface Location {
 }
 
 export class Company implements Mappable {
-  companyName: string;
+  companyName: string; 
   catchPhrase: string;
   location: Location;
   color: string = "red";
@@ -16,8 +16,8 @@ export class Company implements Mappable {
     this.companyName = faker.company.companyName();
     this.catchPhrase = faker.company.catchPhrase();
     this.location = {
-      lat: Number(faker.address.latitude()), // Zmiana na Number
-      lng: Number(faker.address.longitude())  // Zmiana na Number
+      lat: Number(faker.location.latitude()),
+      lng: Number(faker.location.longitude())
     };
   }
 
