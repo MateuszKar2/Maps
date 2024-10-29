@@ -1,15 +1,5 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
-<!-- <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mapa Google</title>
-</head>
-<body>
-  <div id="map" style="height: 100%;"></div>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBNLrJhOMz6idD05pzfn5lhA-TAw-mAZCU&callback=Function.prototype"></script>
-<script src="./src/index.ts"></script> -->
-
 <title>Mapa Google</title>
 <style>
     #map {
@@ -20,7 +10,7 @@
 </head>
 <body>
 <div id="map"></div>
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBNLrJhOMz6idD05pzfn5lhA-TAw-mAZCU&callback=Function.prototype"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBNLrJhOMz6idD05pzfn5lhA-TAw-mAZCU&callback=Function.prototype" async defer></script>
 <script>
     async function initMap() {
         const mapElement = document.getElementById('map');
@@ -42,7 +32,46 @@
         }
     }
 </script>
+</body>
+</html> -->
 
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa Google</title>
+    <style>
+        #map {
+            height: 400px; /* Ustaw wysokość mapy */
+            width: 100%;   /* Ustaw szerokość mapy */
+        }
+    </style>
+</head>
+<body>
+    <div id="map"></div>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBNLrJhOMz6idD05pzfn5lhA-TAw-mAZCU&callback=initMap" async defer></script>
+    <script>
+        async function initMap() {
+            const mapElement = document.getElementById('map');
+            if (mapElement) {
+                const { Map } = await google.maps.importLibrary("maps");
+                const map = new Map(mapElement, {
+                    zoom: 1,
+                    center: { lat: 0, lng: 0 }
+                });
+
+                // Importowanie biblioteki marker
+                const { Marker } = await google.maps.importLibrary("marker");
+                new Marker({
+                    position: { lat: 0, lng: 0 },
+                    map: map,
+                });
+            } else {
+                console.error('Element z identyfikatorem "map" nie został odnaleziony.');
+            }
+        }
+    </script>
 </body>
 </html>
 
