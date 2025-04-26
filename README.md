@@ -46,14 +46,16 @@ npm start
 5.**The app will be available at http://localhost:3000.**
 
 📂 Folder Structure
-bash
-Kopiuj
-Edytuj
-src/
-├── components/           # React components (MapView, LocationSearch, etc.)
-├── services/             # API calls and handling map data
-├── App.js                # Main application file
-└── index.js              # Entry point for the app
+src/                      # Main source folder
+├── components/            # Reusable React components
+│   ├── MapView.js         # Component for displaying the map
+│   ├── LocationSearch.js  # Component for searching locations
+│   └── Marker.js          # Component for handling markers on the map
+├── services/              # Handles API requests and map data
+│   ├── mapAPI.js          # File for interacting with the map API (e.g., Google Maps, OpenStreetMap)
+│   └── locationService.js # Helper functions for location-based features (geocoding, etc.)
+├── App.js                 # Main app component that holds the structure and logic
+└── index.js               # Entry point for the app, renders App.js
 🧑‍💻 Author
 Mateusz Karpiński
 🔗 GitHub Profile
