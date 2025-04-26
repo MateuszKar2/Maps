@@ -45,7 +45,19 @@ npm start
 
 5.**The app will be available at http://localhost:3000.**
 
-src/ # Main source folder for the application ├── components/ # React components used in the app │ ├── MapView.js # Component responsible for rendering the map │ ├── LocationSearch.js # Component that allows users to search for locations │ └── Marker.js # Component for handling markers on the map ├── services/ # Handles API requests and map data │ ├── mapAPI.js # File for interacting with the map API (e.g., Google Maps, OpenStreetMap) │ └── locationService.js # Helper functions related to locations (geocoding, etc.) ├── App.js # Main component for the app, contains logic and structure └── index.js # Entry point of the application, renders App.js
+## 📂 Folder Structure
+
+- **`src/`**: Main source folder for the application
+  - **`components/`**: React components used in the app
+    - `MapView.js`: Component responsible for rendering the map
+    - `LocationSearch.js`: Component that allows users to search for locations
+    - `Marker.js`: Component for handling markers on the map
+  - **`services/`**: Handles API requests and map data
+    - `mapAPI.js`: File for interacting with the map API (e.g., Google Maps, OpenStreetMap)
+    - `locationService.js`: Helper functions related to locations (geocoding, etc.)
+  - **`App.js`**: Main component for the app, contains logic and structure
+  - **`index.js`**: Entry point of the application, renders `App.js`
+    
 🧑‍💻 Author
 Mateusz Karpiński
 🔗 GitHub Profile
