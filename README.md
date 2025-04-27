@@ -1,4 +1,4 @@
-# Maps
+ # Maps
 
 **Maps** is a web application that allows users to view and interact with maps. It integrates with a map API (such as Google Maps or OpenStreetMap) to provide users with functionality like searching locations, displaying markers, and exploring geographic information.
 
